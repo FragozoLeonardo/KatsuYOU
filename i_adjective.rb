@@ -22,7 +22,7 @@ class IAdjective < Word
       "Adverbial" => "#{stem}く",
       "Degree" => "#{stem}さ",
       "Degree negative" => "#{stem}くなさ",
-      "Tentative" => "#{stem}かろう"
+      "Volitional" => "#{stem}かろう - Rare"
     }
   end
 end

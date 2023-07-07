@@ -22,7 +22,7 @@ class CompoundIIAdjective < Word
       "Adverbial" => "#{stem}よく",
       "Degree" => "#{stem}よさ",
       "Degree negative" => "#{stem}よくなさ",
-      "Tentative" => "#{stem}よかろう"
+      "Voliotional" => "#{stem}よかろう - Rare"
     }
   end
 end
