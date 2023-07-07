@@ -18,9 +18,9 @@ Feel free to provide feedback or report any issues you encounter. Contributions 
 
 ## Sample Images
 
-(いい Derivated Adjectives) ! [Imagem 1](https://i.postimg.cc/J000jCNr/Captura-de-tela-2023-07-07-203950.png)
+(いい Derivated Adjectives) ![Imagem 1](https://i.postimg.cc/J000jCNr/Captura-de-tela-2023-07-07-203950.png)
 
-(い Adjectives - 形容詞) ! [Imagem 2](https://i.postimg.cc/QCztbYmp/Captura-de-tela-2023-07-07-204106.png)
+(い Adjectives - 形容詞) ![Imagem 2](https://i.postimg.cc/QCztbYmp/Captura-de-tela-2023-07-07-204106.png)
 
 (な Adjectives - 形容動詞) ![Imagem 3](https://i.postimg.cc/66bytTKy/Captura-de-tela-2023-07-07-204622.png)
 
