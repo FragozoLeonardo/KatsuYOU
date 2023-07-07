@@ -12,16 +12,16 @@ To use this CLI tool, ensure that Ruby is installed on your machine. You can dow
 
 Once Ruby is installed, navigate to the folder where you have cloned this repository and execute the following command:
 
-ruby conjugator.rbg
+ruby conjugator.rb
 
 Feel free to provide feedback or report any issues you encounter. Contributions are welcome!
 
 ## Sample Images
 
-![Imagem 1](https://i.postimg.cc/J000jCNr/Captura-de-tela-2023-07-07-203950.png) (いい derivated adjectives)
+(いい Derivated Adjectives) ! [Imagem 1](https://i.postimg.cc/J000jCNr/Captura-de-tela-2023-07-07-203950.png)
 
-![Imagem 2](https://i.postimg.cc/QCztbYmp/Captura-de-tela-2023-07-07-204106.png) (い adjectives - 形容詞)
+(い Adjectives - 形容詞) ! [Imagem 2](https://i.postimg.cc/QCztbYmp/Captura-de-tela-2023-07-07-204106.png)
 
-![Imagem 3](https://i.postimg.cc/66bytTKy/Captura-de-tela-2023-07-07-204622.png) (な adjectives - 形容動詞)
+(な Adjectives - 形容動詞) ![Imagem 3](https://i.postimg.cc/66bytTKy/Captura-de-tela-2023-07-07-204622.png)
 
-![Imagem 4](https://i.postimg.cc/rFdzmcyg/Captura-de-tela-2023-07-07-204717.png) (names - 名詞)
+(Names - 名詞) ![Imagem 4](https://i.postimg.cc/rFdzmcyg/Captura-de-tela-2023-07-07-204717.png)
