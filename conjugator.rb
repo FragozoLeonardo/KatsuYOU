@@ -26,12 +26,13 @@ end
 conjugator = Conjugator.new
 
 loop do
-  puts "Katsuyo Generator - a CLI by Leonardo Quadros Fragozo v1.0:"
-  puts "1. Conjugate a compound いい adjective"
-  puts "2. Conjugate a regular い adjective"
-  puts "3. Conjugate a な adjective"
-  puts "4. Conjugate a name"
-  puts "5. Exit"
+  puts "Katsuyo Generator - a CLI by Leonardo Quadros Fragozo v1.0"
+  puts "What you want to conjugate?"
+  puts "1 - いい 形容詞 (いい And it's related adjectives)"
+  puts "2 - (普通の形容詞 - Normal い Adjectives)"
+  puts "3 - 形容動詞 - (な Adjectives)"
+  puts "4 - 名詞 - (Names)"
+  puts "5 - Exit"
 
   print "Enter your choice (1-5): "
   choice = gets.chomp.to_i

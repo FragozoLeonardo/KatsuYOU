@@ -9,7 +9,7 @@ class Name < Word
       "Polite present" => "#{word}です",
       "Polite past" => "#{word}でした",
       "Polite negative" => "#{word}ではありません / #{word}じゃありません / #{word}ではないです / #{word}じゃないです",
-      "Polite past negative" => "#{word}ではありませんでした / #{word}じゃありませんでした / #{word}ではなかったです /　#{word}じゃなかったです",
+      "Polite past negative" => "#{word}ではありませんでした / #{word}じゃありませんでした / #{word}ではなかったです / #{word}じゃなかったです",
       "たら form" => "#{word}だったら",
       "たら negative" => "#{word}ではなかったら / #{word}じゃなかったら",
       "ば form" => "#{word}なら（ば）",

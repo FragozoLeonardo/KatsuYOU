@@ -1,5 +1,3 @@
-require_relative 'word'
-
 class IAdjective < Word
   def conjugate
     stem = word[0..-2]
