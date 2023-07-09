@@ -1,8 +1,20 @@
-class IAdjective < Word
+require_relative 'word'
+
+class IAdjectiveIrregular < Word
   def conjugate
-    stem = word[0..-2]
+    stem =
+      case word
+      when "いい"
+        "よ"
+      when /かっこいい\z/
+        word[0..-5] + "っこよ"
+      when /いい\z/
+        word[0..-3] + "よ"
+      else
+        word[0..-2]
+      end
+
     {
-      "Stem" => stem,
       "Present" => word,
       "Past" => "#{stem}かった",
       "Negative" => "#{stem}くない",

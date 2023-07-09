@@ -1,7 +1,6 @@
-require_relative 'compound_ii_adjective'
+require_relative 'i_adjective_irregular'
 require_relative 'i_adjective'
-require_relative 'na_adjective'
-require_relative 'name'
+require_relative 'na_adjective_name'
 
 class Conjugator
   def initialize
@@ -26,10 +25,10 @@ end
 conjugator = Conjugator.new
 
 loop do
-  puts "Katsuyo Generator - a CLI by Leonardo Quadros Fragozo v1.0"
-  puts "What you want to conjugate?"
-  puts "1 - いい 形容詞 (いい And it's related adjectives)"
-  puts "2 - (普通の形容詞 - Normal い Adjectives)"
+  puts "Katsuyo Generator - a CLI by Leonardo Quadros Fragozo v2.0"
+  puts "What do you want to conjugate?"
+  puts "1 - 変な形容詞 - (Irregular い adjectives)"
+  puts "2 - 普通の形容詞 - (Regular い Adjectives)"
   puts "3 - 形容動詞 - (な Adjectives)"
   puts "4 - 名詞 - (Names)"
   puts "5 - Exit"
@@ -39,43 +38,43 @@ loop do
 
   case choice
   when 1
-    print "Enter a compound いい adjective: "
-    adjective = gets.chomp
+    print "Enter an irregular い adjective - such as いい, かっこいい, etc: "
+    irr_adjective = gets.chomp
 
-    compound_ii_adjective = CompoundIIAdjective.new(adjective)
-    conjugator.add_word(compound_ii_adjective)
+    i_irregular_adjective = IAdjectiveIrregular.new(irr_adjective)
+    conjugator.add_word(i_irregular_adjective)
 
-    conjugator.conjugate_all  # Print conjugations immediately
+    conjugator.conjugate_all
 
     puts "\n"
   when 2
     print "Enter a regular い adjective: "
-    adjective = gets.chomp
+    reg_adjective_i = gets.chomp
 
-    i_adjective = IAdjective.new(adjective)
+    i_adjective = IAdjective.new(reg_adjective_i)
     conjugator.add_word(i_adjective)
 
-    conjugator.conjugate_all  # Print conjugations immediately
+    conjugator.conjugate_all
 
     puts "\n"
   when 3
-    print "Enter a な adjective: "
-    adjective = gets.chomp
+    print "Enter a な adjective in it's dictionary form - example: 元気"
+    name_adjective_na = gets.chomp
 
-    na_adjective = NaAdjective.new(adjective)
-    conjugator.add_word(na_adjective)
+    na_adjective_name = NaAdjectiveName.new(name_adjective_na)
+    conjugator.add_word(na_adjective_name)
 
-    conjugator.conjugate_all  # Print conjugations immediately
+    conjugator.conjugate_all
 
     puts "\n"
   when 4
     print "Enter a name: "
-    name = gets.chomp
+    name_adjective_na = gets.chomp
 
-    name_word = Name.new(name)
-    conjugator.add_word(name_word)
+    na_adjective_name = NaAdjectiveName.new(name_adjective_na)
+    conjugator.add_word(na_adjective_name)
 
-    conjugator.conjugate_all  # Print conjugations immediately
+    conjugator.conjugate_all
 
     puts "\n"
   when 5

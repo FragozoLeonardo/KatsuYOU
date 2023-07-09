@@ -1,15 +1,15 @@
-class Name < Word
+class NaAdjectiveName < Word
   def conjugate
     {
       "Stem" => word,
       "Present" => "#{word}だ",
       "Past" => "#{word}だった",
-      "Negative" => "#{word}ではない / じゃない",
-      "Past negative" => "#{word}ではなかった / じゃなかった",
+      "Negative" => "#{word}ではない / #{word}じゃない",
+      "Past negative" => "#{word}ではなかった / #{word}じゃなかった",
       "Polite present" => "#{word}です",
       "Polite past" => "#{word}でした",
-      "Polite negative" => "#{word}ではありません / #{word}じゃありません / #{word}ではないです / #{word}じゃないです",
-      "Polite past negative" => "#{word}ではありませんでした / #{word}じゃありませんでした / #{word}ではなかったです / #{word}じゃなかったです",
+      "Polite negative" => "#{word}ではないです / #{word}じゃないです / #{word}ではありません / #{word}じゃありません",
+      "Polite past negative" => "#{word}ではなかったです / #{word}じゃなかったです / #{word}ではありませんでした / #{word}じゃありませんでした",
       "たら form" => "#{word}だったら",
       "たら negative" => "#{word}ではなかったら / #{word}じゃなかったら",
       "ば form" => "#{word}なら（ば）",
