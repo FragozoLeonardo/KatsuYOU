@@ -1,4 +1,3 @@
-require_relative 'i_adjective_irregular'
 require_relative 'i_adjective'
 require_relative 'na_adjective_name'
 
