@@ -25,7 +25,7 @@ end
 conjugator = Conjugator.new
 
 loop do
-  puts "Katsuyo Generator - a CLI by Leonardo Quadros Fragozo v2.0"
+  puts "Katsuyo Generator - a CLI by Leonardo Quadros Fragozo v2.5"
   puts "What do you want to conjugate?"
   puts "1 - 変な形容詞 - (Irregular い adjectives)"
   puts "2 - 普通の形容詞 - (Regular い Adjectives)"
@@ -39,19 +39,19 @@ loop do
   case choice
   when 1
     print "Enter an irregular い adjective - such as いい, かっこいい, etc: "
-    irr_adjective = gets.chomp
+    adjective_i = gets.chomp
 
-    i_irregular_adjective = IAdjectiveIrregular.new(irr_adjective)
-    conjugator.add_word(i_irregular_adjective)
+    i_adjective = IAdjective.new(adjective_i)
+    conjugator.add_word(i_adjective)
 
     conjugator.conjugate_all
 
     puts "\n"
   when 2
     print "Enter a regular い adjective: "
-    reg_adjective_i = gets.chomp
+    adjective_i = gets.chomp
 
-    i_adjective = IAdjective.new(reg_adjective_i)
+    i_adjective = IAdjective.new(adjective_i)
     conjugator.add_word(i_adjective)
 
     conjugator.conjugate_all

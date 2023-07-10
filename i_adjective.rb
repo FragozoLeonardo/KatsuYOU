@@ -1,6 +1,17 @@
+require_relative 'word'
+
 class IAdjective < Word
   def conjugate
-    stem = word[0..-2]
+    stem =
+      case word
+      when "いい"
+        "よ"
+      when /いい\z/
+        word[0..-3] + "よ"
+      else
+        word[0..-2]
+      end
+
     {
       "Stem" => stem,
       "Present" => word,
