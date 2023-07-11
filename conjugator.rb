@@ -24,7 +24,7 @@ end
 conjugator = Conjugator.new
 
 loop do
-  puts "Katsuyo Generator - a CLI by Leonardo Quadros Fragozo v2.5"
+  puts "Katsuyo Generator - a CLI by Leonardo Quadros Fragozo v2.7"
   puts "What do you want to conjugate?"
   puts "1 - 変な形容詞 - (Irregular い adjectives)"
   puts "2 - 普通の形容詞 - (Regular い Adjectives)"
