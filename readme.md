@@ -20,4 +20,11 @@ Feel free to provide feedback or report any issues you encounter. Contributions 
 
 [![Leo-Katsu-CLI.png](https://i.postimg.cc/J4V99W3B/Leo-Katsu-CLI.png)](https://postimg.cc/RqdsHyDM)
 
+## TODO Lsst
+
+- Add supports for 五段活用 (る / group 2 verbs)
+- Add Supports to Irregular Verbs
+- Improvements in the menu usability
+- Improvements in File Structure
+
 Please enjoy the CLI! <3
