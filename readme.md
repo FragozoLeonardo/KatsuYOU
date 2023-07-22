@@ -1,4 +1,4 @@
-# Japanese Conjugator CLI
+# KatsuGen (活ゲン), a Japanese language Conjugator CLI
 
 This is a small command-line interface (CLI) tool for generating inflections of verbs, adjectives and names in the Japanese language.
 
