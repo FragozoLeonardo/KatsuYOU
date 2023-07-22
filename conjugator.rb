@@ -25,13 +25,13 @@ end
 conjugator = Conjugator.new
 
 loop do
-  puts "Katsuyo Generator - a CLI by Leonardo Quadros Fragozo v3.2.5"
+  puts "Katsuyo Generator - a CLI by Leonardo Quadros Fragozo v3.3"
   puts "What do you want to conjugate?"
   puts "1 - 変な形容詞 - (Irregular い adjectives)"
   puts "2 - 普通の形容詞 - (Regular い Adjectives)"
   puts "3 - 形容動詞 - (な Adjectives)"
   puts "4 - 名詞 - (Names)"
-  puts "5 - 一段活用動詞 - (る Verbs)"
+  puts "5 - 一段活用動詞 - (る / group 1 Verbs)"
   puts "6 - Exit"
 
   print "Enter your choice (1-6): "
@@ -61,7 +61,7 @@ loop do
   when 3
     print "Enter a な adjective in it's dictionary form - example: 元気"
     name_adjective_na = gets.chomp
-
+11
     na_adjective_name = NaAdjectiveName.new(name_adjective_na)
     conjugator.add_word(na_adjective_name)
 
@@ -79,7 +79,7 @@ loop do
 
     puts "\n"
   when 5
-    print "Enter a 一段 (る) verb: "
+    print "Enter a 一段 (る) / group 1 verb: "
     ichidan_verb = gets.chomp
 
     ru_verb = IchidanVerb.new(ichidan_verb)

@@ -13,6 +13,7 @@ class IAdjective < Word
       end
 
     {
+      "Word" => word,
       "Stem" => stem,
       "Present" => word,
       "Past" => "#{stem}かった",

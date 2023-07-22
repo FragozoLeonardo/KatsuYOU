@@ -1,6 +1,7 @@
 class NaAdjectiveName < Word
   def conjugate
     {
+      "word" => word,
       "Stem" => word,
       "Present" => "#{word}だ",
       "Past" => "#{word}だった",
