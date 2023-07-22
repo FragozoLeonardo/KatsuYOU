@@ -23,8 +23,8 @@ Feel free to provide feedback or report any issues you encounter. Contributions 
 ## TODO Lsst
 
 - Add supports for 五段活用 (る / group 2 verbs)
-- Add Supports to Irregular Verbs
+- Add Supports to trregular verbs
 - Improvements in the menu usability
-- Improvements in File Structure
+- Improvements in file ttructure
 
 Please enjoy the CLI! <3
