@@ -1,6 +1,6 @@
 # Japanese Conjugator CLI
 
-This is a small command-line interface (CLI) tool for generating inflections of adjectives and names in the Japanese language.
+This is a small command-line interface (CLI) tool for generating inflections of verbs, adjectives and names in the Japanese language.
 
 Please note that it does not cover all variations since Japanese is an agglutinative language with nearly infinite possibilities. However, it aims to cover the most common ones.
 
