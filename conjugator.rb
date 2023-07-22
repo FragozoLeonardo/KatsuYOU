@@ -1,5 +1,6 @@
 require_relative 'i_adjective'
 require_relative 'na_adjective_name'
+require_relative 'ichidan_verb'
 
 class Conjugator
   def initialize
@@ -24,15 +25,16 @@ end
 conjugator = Conjugator.new
 
 loop do
-  puts "Katsuyo Generator - a CLI by Leonardo Quadros Fragozo v2.7"
+  puts "Katsuyo Generator - a CLI by Leonardo Quadros Fragozo v3.2/"
   puts "What do you want to conjugate?"
   puts "1 - 変な形容詞 - (Irregular い adjectives)"
   puts "2 - 普通の形容詞 - (Regular い Adjectives)"
   puts "3 - 形容動詞 - (な Adjectives)"
   puts "4 - 名詞 - (Names)"
-  puts "5 - Exit"
+  puts "5 - 一段活用動詞 - (る Verbs)"
+  puts "6 - Exit"
 
-  print "Enter your choice (1-5): "
+  print "Enter your choice (1-6): "
   choice = gets.chomp.to_i
 
   case choice
@@ -77,6 +79,16 @@ loop do
 
     puts "\n"
   when 5
+    print "Enter a 一段 (る) verb: "
+    ichidan_verb = gets.chomp
+
+    ru_verb = IchidanVerb.new(ichidan_verb)
+    conjugator.add_word(ru_verb)
+
+    conjugator.conjugate_all
+
+    puts "\n"
+  when 6
     break
   else
     puts "Invalid choice. Please enter a valid option."
