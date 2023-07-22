@@ -23,7 +23,7 @@ Feel free to provide feedback or report any issues you encounter. Contributions 
 ## TODO Lsst
 
 - Add support for 五段活用 (る / group 2 verbs)
-- Add Support to trregular verbs
+- Add support to trregular verbs
 - Improvements in the menu usability
 - Improvements in file ttructure
 
