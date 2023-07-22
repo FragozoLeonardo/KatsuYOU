@@ -20,7 +20,7 @@ ruby conjugator.rb
 
 ## TODO List:
 
-- Add support for 五段活用 (る / group 2 verbs).
+- Add support for 五段活用 (う / group 2 verbs).
 - Add support for irregular verbs.
 - Make improvements to the menu usability.
 - Refine the file structure.
