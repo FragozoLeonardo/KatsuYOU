@@ -19,6 +19,8 @@ class IchidanVerb < Word
       "ば negative" => "#{stem}なければ",
       "Conjunctive" => "#{stem}て",
       "Negative conjunctive" => "#{stem}なくて",
+      "'Without doing'" => "#{stem}ないで ",
+      "Formal 'without doing'" => "#{stem}ずに ",
       "Volitional" => "#{stem}よう",
       "Polite volitional" => "#{stem}ましょう",
       "Negative polite volitional" => "#{stem}まい",
@@ -33,7 +35,8 @@ class IchidanVerb < Word
       "Passive causative" => "#{stem}させられる",
       "Negative passive causative" => "　#{stem}させられない",
       "Imperative" => "#{stem}ろ",
-      "Negative imperative" => "#{stem}るな"
+      "Negative imperative" => "#{stem}るな",
+      "Old negative" => "#{stem}ぬ"
     }
   end
 end
