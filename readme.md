@@ -14,8 +14,6 @@ Once Ruby is installed, navigate to the folder where you have cloned this reposi
 
 ruby conjugator.rb
 
-Feel free to provide feedback or report any issues you encounter. Contributions are welcome!
-
 ## Sample Images
 
 [![Leo-Katsu-CLI.png](https://i.postimg.cc/J4V99W3B/Leo-Katsu-CLI.png)](https://postimg.cc/RqdsHyDM)
@@ -28,3 +26,5 @@ Feel free to provide feedback or report any issues you encounter. Contributions 
 - Refine the file structure.
 
 Please enjoy using the CLI! <3
+
+Feel free to provide feedback or report any issues you encounter. Contributions are welcome!
