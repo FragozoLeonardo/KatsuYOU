@@ -18,4 +18,6 @@ Feel free to provide feedback or report any issues you encounter. Contributions 
 
 ## Sample Images
 
-Coming soon
+[![Leo-Katsu-CLI.png](https://i.postimg.cc/J4V99W3B/Leo-Katsu-CLI.png)](https://postimg.cc/RqdsHyDM)
+
+Please enjoy the CLI! <3
