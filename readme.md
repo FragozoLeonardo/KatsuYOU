@@ -23,6 +23,7 @@ ruby conjugator.rb
 - Add support for 五段活用 (う / group 2 verbs).
 - Add support for irregular verbs.
 - Add support to 助動詞 (auxilirary "verbs") as I understand them better in my language studies.
+- Add a help menu explaining how to get the best from this tool as a language learner.
 - Make improvements to the menu usability.
 - Add Rspec testes for saving time on content proofreading and functionalities.
 - Refine the file structure.
