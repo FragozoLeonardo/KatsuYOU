@@ -13,7 +13,7 @@ class Conjugator
 
   def conjugate_all
     @words.each do |word|
-      conjugations = word.conjugate
+      conjugations = word.conjugategi
       conjugations.each do |form, value|
         puts "#{form}: #{value}"
       end
