@@ -1,4 +1,4 @@
-# KatsuGen (活ゲン), a Japanese language Conjugator CLI
+# KatsuYOU (活ヨウ), a Japanese language Conjugator CLI
 
 This is a small command-line interface (CLI) tool for generating inflections of verbs, adjectives and names in the Japanese language.
 
@@ -22,9 +22,13 @@ ruby conjugator.rb
 
 - Add support for 五段活用 (う / group 2 verbs).
 - Add support for irregular verbs.
+- Add support to 助動詞 (auxilirary "verbs") as I understand them better in my language studies.
 - Make improvements to the menu usability.
+- Add Rspec testes for saving time on content proofreading and functionalities.
 - Refine the file structure.
+
 
 Please enjoy using the CLI! <3
 
 Feel free to provide feedback or report any issues you encounter. Contributions are welcome!
+gi

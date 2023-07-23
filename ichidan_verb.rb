@@ -23,20 +23,16 @@ class IchidanVerb < Word
       "Formal 'without doing'" => "#{stem}ずに",
       "Volitional" => "#{stem}よう",
       "Polite volitional" => "#{stem}ましょう",
-      "Negative polite volitional" => "#{stem}まい",
-      "Negative desire" => "#{stem}たい",
-      "Negative past desire" => "#{stem}たかった",
+      "Negative まい volitional" => "#{stem}まい",
+      "First person desire" => "#{stem}たい",
+      "Third person desire" => "#{stem}たがる",
       "Potential" => "#{stem}られる / #{stem}れる",
-      "Negative potential" => "#{stem}られない / #{stem}れない",
       "Passive" => "#{stem}られる",
-      "Negative passive" => "#{stem}られない",
       "Causative" => "#{stem}させる",
-      "Negative causative" => "#{stem}させない",
       "Passive causative" => "#{stem}させられる",
-      "Negative passive causative" => "#{stem}させられない",
       "Imperative" => "#{stem}ろ",
       "Negative imperative" => "#{stem}るな",
-      "Old negative" => "#{stem}ぬ"
+      "Old negative" => "#{stem}ぬ / #{stem}ん"
     }
   end
 end
