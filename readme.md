@@ -32,4 +32,3 @@ ruby conjugator.rb
 Please enjoy using the CLI! <3
 
 Feel free to provide feedback or report any issues you encounter. Contributions are welcome!
-gi
