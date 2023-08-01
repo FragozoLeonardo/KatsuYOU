@@ -19,7 +19,7 @@ class IchidanVerb < Word
       "ば negative" => "#{stem}なければ",
       "Conjunctive" => "#{stem}て",
       "Negative conjunctive" => "#{stem}なくて",
-      "'ithout doing" => "#{stem}ないで",
+      "'Without doing" => "#{stem}ないで",
       "'Formal without doing" => "#{stem}ずに",
       "Volitional" => "#{stem}よう",
       "Polite volitional" => "#{stem}ましょう",
