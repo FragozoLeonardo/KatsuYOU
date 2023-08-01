@@ -13,7 +13,7 @@ class Conjugator
 
   def conjugate_all
     @words.each do |word|
-      conjugations = word.conjugategi
+      conjugations = word.conjugate
       conjugations.each do |form, value|
         puts "#{form}: #{value}"
       end
@@ -25,7 +25,7 @@ end
 conjugator = Conjugator.new
 
 loop do
-  puts " 活ヨウ - KatsuYou - a CLI by Leonardo Quadros Fragozo v3.37"
+  puts " 活ヨウ - KatsuYou - a CLI by Leonardo Quadros Fragozo v3.3.8.5"
   puts "What do you want to conjugate?"
   puts "1 - 変な形容詞 - (Irregular い adjectives)"
   puts "2 - 普通の形容詞 - (Regular い Adjectives)"
