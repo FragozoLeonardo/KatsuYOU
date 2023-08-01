@@ -1,5 +1,4 @@
 require_relative 'word'
-
 class IchidanVerb < Word
   def conjugate
     stem = word[0..-2]

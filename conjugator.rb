@@ -1,7 +1,7 @@
 require_relative 'i_adjective'
 require_relative 'na_adjective_name'
 require_relative 'ichidan_verb'
-
+require_relative 'godan_verb'
 class Conjugator
   def initialize
     @words = []
@@ -25,16 +25,17 @@ end
 conjugator = Conjugator.new
 
 loop do
-  puts " 活ヨウ - KatsuYou - a CLI by Leonardo Quadros Fragozo v3.3.8.5"
+  puts " 活ヨウ - KatsuYou - a CLI by Leonardo Quadros Fragozo v3.4.2"
   puts "What do you want to conjugate?"
   puts "1 - 変な形容詞 - (Irregular い adjectives)"
   puts "2 - 普通の形容詞 - (Regular い Adjectives)"
   puts "3 - 形容動詞 - (な Adjectives)"
   puts "4 - 名詞 - (Names)"
   puts "5 - 一段活用動詞 - (る / group 1 Verbs)"
-  puts "6 - Exit"
+  puts "6 - 五段活用動詞 - (う / group 2 Verbs)"
+  puts "7 - Exit"
 
-  print "Enter your choice (1-6): "
+  print "Enter your choice (1-7): "
   choice = gets.chomp.to_i
 
   case choice
@@ -61,7 +62,6 @@ loop do
   when 3
     print "Enter a な adjective in it's dictionary form - example: 元気"
     name_adjective_na = gets.chomp
-11
     na_adjective_name = NaAdjectiveName.new(name_adjective_na)
     conjugator.add_word(na_adjective_name)
 
@@ -89,6 +89,16 @@ loop do
 
     puts "\n"
   when 6
+    print "Enter a 五段 (う) / group 2 verb: "
+    godan_verb = gets.chomp
+
+    u_verb = GodanVerb.new(godan_verb)
+    conjugator.add_word(u_verb)
+
+    conjugator.conjugate_all
+
+    puts "\n"
+  when 7
     break
   else
     puts "Invalid choice. Please enter a valid option."

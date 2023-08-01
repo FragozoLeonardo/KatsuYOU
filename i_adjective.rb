@@ -1,5 +1,4 @@
 require_relative 'word'
-
 class IAdjective < Word
   def conjugate
     stem =
