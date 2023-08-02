@@ -27,8 +27,8 @@ class GodanVerb < Word
         "Negative 'formal' volitional" => "#{stem}うまい",
         "First person desire" => "#{stem}いたい",
         "Third person desire" => "#{stem}いたがる",
-        "Potential" => "#{stem}えれる",
-        "Passive" => "#{stem}わられる",
+        "Potential" => "#{stem}える",
+        "Passive" => "#{stem}われる",
         "Causative" => "#{stem}わせる",
         "Passive causative" => "#{stem}わせられる",
         "Imperative" => "#{stem}え",
@@ -45,7 +45,7 @@ class GodanVerb < Word
         "Polite past" => "#{stem}きました",
         "Polite negative" => "#{stem}きません",
         "Polite past negative" => "#{stem}きませんでした",
-        "たら form" => "#{stem}かたら",
+        "たら form" => "#{stem}いたら",
         "たら negative" => "#{stem}かなかったら",
         "ば form" => "#{stem}けば",
         "ば negative" => "#{stem}けなければ",
@@ -130,7 +130,6 @@ class GodanVerb < Word
         "Negative imperative" => "#{stem}つな",
         "Old negative" => "#{stem}たぬ / #{stem}たん"
       }
-
 
     end
   end
