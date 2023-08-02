@@ -3,7 +3,6 @@ require_relative 'word'
 class IrregularVerb < Word
   def conjugate
     iku_stem = word[-1] == "く" ? word[0...-1] : word[0]
-
     conjugations = {
       "Present" => word,
       "Past" => "#{iku_stem}った",
@@ -34,7 +33,6 @@ class IrregularVerb < Word
       "Negative imperative" => "#{iku_stem}くな",
       "Old negative" => "#{iku_stem}かぬ / #{iku_stem}かん"
     }
-
     return conjugations
   end
 end
