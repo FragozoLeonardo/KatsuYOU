@@ -79,7 +79,7 @@ loop do
 
     puts "\n"
   when 5
-    print "Enter a 一段 (る) / group 1 verb: "
+    print "Enter a regular 一段 (る) / group 1 verb: "
     ichidan_verb = gets.chomp
 
     ru_verb = IchidanVerb.new(ichidan_verb)
@@ -89,7 +89,7 @@ loop do
 
     puts "\n"
   when 6
-    print "Enter a 五段 (う) / group 2 verb: "
+    print "Enter a regular 五段 (う) / group 2 verb: "
     godan_verb = gets.chomp
 
     u_verb = GodanVerb.new(godan_verb)
