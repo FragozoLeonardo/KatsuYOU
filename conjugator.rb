@@ -2,6 +2,7 @@ require_relative 'i_adjective'
 require_relative 'na_adjective_name'
 require_relative 'ichidan_verb'
 require_relative 'godan_verb'
+require_relative 'irregular_verb'
 class Conjugator
   def initialize
     @words = []
@@ -25,7 +26,7 @@ end
 conjugator = Conjugator.new
 
 loop do
-  puts " 活ヨウ - KatsuYou - a CLI by Leonardo Quadros Fragozo v3.5.7"
+  puts " 活ヨウ - KatsuYou - a CLI by Leonardo Quadros Fragozo v3.6.2"
   puts "What do you want to conjugate?"
   puts "1 - 変な形容詞 - (Irregular い adjectives)"
   puts "2 - 普通の形容詞 - (Regular い Adjectives)"
@@ -33,9 +34,10 @@ loop do
   puts "4 - 名詞 - (Names)"
   puts "5 - 一段活用動詞 - (る / group 1 Verbs)"
   puts "6 - 五段活用動詞 - (う / group 2 Verbs)"
-  puts "7 - Exit"
+  puts "7 - 変な活用動詞 - (Irregular / group 3 Verbs)"
+  puts "8 - Exit"
 
-  print "Enter your choice (1-7): "
+  print "Enter your choice (1-8): "
   choice = gets.chomp.to_i
 
   case choice
@@ -99,6 +101,16 @@ loop do
 
     puts "\n"
   when 7
+    print "Enter a irregular (変な活用動詞) (行く、する、来る、いらっしゃる etc.) verb: "
+    irregular_verb = gets.chomp
+
+    odd_verb = IrregularVerb.new(irregular_verb)
+    conjugator.add_word(odd_verb)
+
+    conjugator.conjugate_all
+
+    puts "\n"
+  when 8
     break
   else
     puts "Invalid choice. Please enter a valid option."
