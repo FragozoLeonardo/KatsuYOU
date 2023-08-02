@@ -13,19 +13,17 @@ To use this CLI tool, ensure that Ruby is installed on your machine. You can dow
 Once Ruby is installed, navigate to the folder where you have cloned this repository and execute the following command:
 
 ruby conjugator.rb
-
 ## Sample Images
 
 [![Leo-Katsu-CLI.png](https://i.postimg.cc/J4V99W3B/Leo-Katsu-CLI.png)](https://postimg.cc/RqdsHyDM)
 
 ## TODO List:
 
-- Add support for irregular verbs.
-- Add support to 助動詞 (auxiliary "verbs") as I understand them better in my language studies.
-- Add a help text explaining how to get the best from this tool with some Japanese language related advice usually not taught by non-native textbooks.
+- Add support for irregular verbs. - Including less know conjunctive/ta irregulars such as 問う, 乞う/請う　and honorific language (keigo) irregulars such as 下さる/いらっしゃる.
+- Add a built-in "guide" explaining how to get the best from this tool with some Japanese language related advice usually not taught by non-native textbooks.
 - Make improvements to the menu usability.
-- Add Rspec testes for saving time on content proofreading and functionalities.
-- Refine the file structure.
+- Add Rspec specs for saving time on content proofreading and functionalities.
+- Improve the file structure in order to feel more oop-esque.
 
 Please enjoy using the CLI! <3
 
