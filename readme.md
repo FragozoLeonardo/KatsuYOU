@@ -19,7 +19,7 @@ ruby conjugator.rb
 
 ## TODO List:
 
-- Add support for irregular verbs. - Including less know て/た inflection irregulars such as 問う, 乞う/請う　and honorific language (keigo) irregulars such as 下さる/いらっしゃる.
+- Add support for irregular verbs. - Including less know て/た inflection irregulars such as 問う, 乞う/請う as well honorific language (keigo) irregulars such as 下さる/いらっしゃる.
 - Add a built-in "guide" explaining how to get the best from this tool with some Japanese language related advice usually not taught by non-native textbooks.
 - Make improvements to the menu usability.
 - Add Rspec specs for saving time on content proofreading and functionalities.
