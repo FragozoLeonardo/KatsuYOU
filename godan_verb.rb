@@ -1,5 +1,4 @@
 require_relative 'word'
-
 class GodanVerb < Word
   def conjugate
     stem = word[0..-2]
@@ -17,7 +16,7 @@ class GodanVerb < Word
         "たら form" => "#{stem}ったら",
         "たら negative" => "#{stem}わなかったら",
         "ば form" => "#{stem}えば",
-        "ば negative" => "#{stem}えなければ",
+        "ば negative" => "#{stem}ってなければ",
         "Conjunctive" => "#{stem}って",
         "Negative conjunctive" => "#{stem}わなくて",
         "Without doing" => "#{stem}わないで",
@@ -66,7 +65,37 @@ class GodanVerb < Word
         "Negative imperative" => "#{stem}くな",
         "Old negative" => "#{stem}かぬ / #{stem}かん"
       }
-
+    when "ぐ"
+      {
+        "Present" => word,
+        "Past" => "#{stem}いだ",
+        "Negative" => "#{stem}かない",
+        "Past negative" => "#{stem}がなかった",
+        "Polite present" => "#{stem}ぎます",
+        "Polite past" => "#{stem}ぎました",
+        "Polite negative" => "#{stem}ぎません",
+        "Polite past negative" => "#{stem}ぎませんでした",
+        "たら form" => "#{stem}いだら",
+        "たら negative" => "#{stem}がなかったら",
+        "ば form" => "#{stem}げば",
+        "ば negative" => "#{stem}げなければ",
+        "Conjunctive" => "#{stem}いで",
+        "Negative conjunctive" => "#{stem}がなくて",
+        "Without doing" => "#{stem}がないで",
+        "'Formal' without doing" => "#{stem}がずに",
+        "Volitional" => "#{stem}ごう",
+        "Polite volitional" => "#{stem}ぎましょう",
+        "Negative 'formal' volitional" => "#{stem}ぐまい",
+        "First person desire" => "#{stem}ぎたい",
+        "Third person desire" => "#{stem}ぎたがる",
+        "Potential" => "#{stem}げる",
+        "Passive" => "#{stem}がれる",
+        "Causative" => "#{stem}がせる",
+        "Passive causative" => "#{stem}がせられる",
+        "Imperative" => "#{stem}け",
+        "Negative imperative" => "#{stem}ぐな",
+        "Old negative" => "#{stem}がぬ / #{stem}がん"
+      }
     when "す"
       {
         "Present" => word,
@@ -98,21 +127,20 @@ class GodanVerb < Word
         "Negative imperative" => "#{stem}すな",
         "Old negative" => "#{stem}さぬ / #{stem}さん"
       }
-
     when "つ"
       {
         "Present" => word,
-       "Past" => "#{stem}った",
+        "Past" => "#{stem}った",
         "Negative" => "#{stem}たない",
         "Past negative" => "#{stem}たなかった",
         "Polite present" => "#{stem}ちます",
         "Polite past" => "#{stem}ちました",
         "Polite negative" => "#{stem}ちません",
         "Polite past negative" => "#{stem}ちませんでした",
-        "たら form" => "#{stem}ちったら",
+        "たら form" => "#{stem}ったら",
         "たら negative" => "#{stem}たなかったら",
         "ば form" => "#{stem}てば",
-        "ば negative" => "#{stem}てなければ",
+        "ば negative" => "#{stem}ってなければ",
         "Conjunctive" => "#{stem}って",
         "Negative conjunctive" => "#{stem}ってなくて",
         "Without doing" => "#{stem}たないで",
@@ -130,7 +158,130 @@ class GodanVerb < Word
         "Negative imperative" => "#{stem}つな",
         "Old negative" => "#{stem}たぬ / #{stem}たん"
       }
-
+    when "ぬ"
+      {
+        "Present" => word,
+        "Past" => "#{stem}んだ",
+        "Negative" => "#{stem}なない",
+        "Past negative" => "#{stem}ななかった",
+        "Polite present" => "#{stem}にます",
+        "Polite past" => "#{stem}にました",
+        "Polite negative" => "#{stem}にません",
+        "Polite past negative" => "#{stem}にませんでした",
+        "たら form" => "#{stem}にったら",
+        "たら negative" => "#{stem}ななかったら",
+        "ば form" => "#{stem}ねば",
+        "ば negative" => "#{stem}ななければ",
+        "Conjunctive" => "#{stem}んで",
+        "Negative conjunctive" => "#{stem}ななくて",
+        "Without doing" => "#{stem}なないで",
+        "'Formal' without doing" => "#{stem}なずに",
+        "Volitional" => "#{stem}のう",
+        "Polite volitional" => "#{stem}にましょう",
+        "Negative 'formal' volitional" => "#{stem}ぬまい",
+        "First person desire" => "#{stem}にたい",
+        "Third person desire" => "#{stem}にたがる",
+        "Potential" => "#{stem}ねる",
+        "Passive" => "#{stem}なれる",
+        "Causative" => "#{stem}なせる",
+        "Passive causative" => "#{stem}なせられる",
+        "Imperative" => "#{stem}ね",
+        "Negative imperative" => "#{stem}ぬな",
+        "Old negative" => "#{stem}なぬ / #{stem}なん"
+      }
+    when "ぶ"
+      {
+        "Present" => word,
+        "Past" => "#{stem}んだ",
+        "Negative" => "#{stem}ばない",
+        "Past negative" => "#{stem}ばなかった",
+        "Polite present" => "#{stem}びます",
+        "Polite past" => "#{stem}びました",
+        "Polite negative" => "#{stem}びません",
+        "Polite past negative" => "#{stem}びませんでした",
+        "たら form" => "#{stem}んだら",
+        "たら negative" => "#{stem}ばなかったら",
+        "ば form" => "#{stem}べば",
+        "ば negative" => "#{stem}ばなければ",
+        "Conjunctive" => "#{stem}んで",
+        "Negative conjunctive" => "#{stem}ばなくて",
+        "Without doing" => "#{stem}ばないで",
+        "'Formal' without doing" => "#{stem}ばずび",
+        "Volitional" => "#{stem}ぼう",
+        "Polite volitional" => "#{stem}びましょう",
+        "Negative 'formal' volitional" => "#{stem}ぶまい",
+        "First person desire" => "#{stem}びたい",
+        "Third person desire" => "#{stem}びたがる",
+        "Potential" => "#{stem}べる",
+        "Passive" => "#{stem}ばれる",
+        "Causative" => "#{stem}ばせる",
+        "Passive causative" => "#{stem}ばせられる",
+        "Imperative" => "#{stem}べ",
+        "Negative imperative" => "#{stem}ぶば",
+        "Old negative" => "#{stem}ばぶ / #{stem}ばん"
+      }
+    when "む"
+      {
+        "Present" => word,
+        "Past" => "#{stem}んだ",
+        "Negative" => "#{stem}まない",
+        "Past negative" => "#{stem}まなかった",
+        "Polite present" => "#{stem}みます",
+        "Polite past" => "#{stem}みました",
+        "Polite negative" => "#{stem}みません",
+        "Polite past negative" => "#{stem}みませんでした",
+        "たら form" => "#{stem}んだら",
+        "たら negative" => "#{stem}まなかったら",
+        "ば form" => "#{stem}めま",
+        "ば negative" => "#{stem}まなけれま",
+        "Conjunctive" => "#{stem}んで",
+        "Negative conjunctive" => "#{stem}まなくて",
+        "Without doing" => "#{stem}まないで",
+        "'Formal' without doing" => "#{stem}まずみ",
+        "Volitional" => "#{stem}もう",
+        "Polite volitional" => "#{stem}みましょう",
+        "Negative 'formal' volitional" => "#{stem}むまい",
+        "First person desire" => "#{stem}みたい",
+        "Third person desire" => "#{stem}みたがる",
+        "Potential" => "#{stem}める",
+        "Passive" => "#{stem}まれる",
+        "Causative" => "#{stem}ませる",
+        "Passive causative" => "#{stem}ませられる",
+        "Imperative" => "#{stem}め",
+        "Negative imperative" => "#{stem}むま",
+        "Old negative" => "#{stem}まむ / #{stem}まん"
+      }
+    when "る"
+      {
+        "Present" => word,
+        "Past" => "#{stem}った",
+        "Negative" => "#{stem}らない",
+        "Past negative" => "#{stem}らなかった",
+        "Polite present" => "#{stem}ります",
+        "Polite past" => "#{stem}りました",
+        "Polite negative" => "#{stem}りません",
+        "Polite past negative" => "#{stem}りませんでした",
+        "たら form" => "#{stem}ったら",
+        "たら negative" => "#{stem}らなかったら",
+        "ば form" => "#{stem}れば",
+        "ば negative" => "#{stem}ってなければ",
+        "Conjunctive" => "#{stem}って",
+        "Negative conjunctive" => "#{stem}ってなくて",
+        "Without doing" => "#{stem}らないで",
+        "'Formal' without doing" => "#{stem}らずに",
+        "Volitional" => "#{stem}ろう",
+        "Polite volitional" => "#{stem}りましょう",
+        "Negative 'formal' volitional" => "#{stem}るまい",
+        "First person desire" => "#{stem}りたい",
+        "Third person desire" => "#{stem}りたがる",
+        "Potential" => "#{stem}れる",
+        "Passive" => "#{stem}られる",
+        "Causative" => "#{stem}らせる",
+        "Passive causative" => "#{stem}らせられる",
+        "Imperative" => "#{stem}れ",
+        "Negative imperative" => "#{stem}るな",
+        "Old negative" => "#{stem}らぬ / #{stem}らん"
+      }
     end
   end
 end

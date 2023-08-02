@@ -25,7 +25,7 @@ end
 conjugator = Conjugator.new
 
 loop do
-  puts " 活ヨウ - KatsuYou - a CLI by Leonardo Quadros Fragozo v3.5.2.5"
+  puts " 活ヨウ - KatsuYou - a CLI by Leonardo Quadros Fragozo v3.5.7"
   puts "What do you want to conjugate?"
   puts "1 - 変な形容詞 - (Irregular い adjectives)"
   puts "2 - 普通の形容詞 - (Regular い Adjectives)"
@@ -40,7 +40,7 @@ loop do
 
   case choice
   when 1
-    print "Enter an irregular い adjective - such as いい, かっこいい, etc: "
+    print "Enter an irregular い adjective - such as 「いい」, 「かっこいい」, etc: "
     adjective_i = gets.chomp
 
     i_adjective = IAdjective.new(adjective_i)
@@ -60,7 +60,7 @@ loop do
 
     puts "\n"
   when 3
-    print "Enter a な adjective in it's dictionary form - example: 元気"
+    print "Enter a な adjective in it's dictionary form - example: 「元気」"
     name_adjective_na = gets.chomp
     na_adjective_name = NaAdjectiveName.new(name_adjective_na)
     conjugator.add_word(na_adjective_name)
