@@ -103,10 +103,7 @@ class IrregularVerb < Word
           "Negative 'formal' volitional" => "#{aru_stem}るまい",
           "First person desire" => "#{aru_stem}りたい",
           "Third person desire" => "#{aru_stem}りたがる",
-          "Potential" => "#{aru_stem}れる",
-          "Passive" => "#{aru_stem}られる",
-          "Causative" => "#{aru_stem}らせる",
-          "Passive causative" => "#{aru_stem}らせられる",
+          "Potential" => "#{aru_stem}りえる",
           "Imperative" => "#{aru_stem}れ",
           "Negative imperative" => "#{aru_stem}るな",
           "Old negative" => "#{aru_stem}らぬ / #{aru_stem}らん"
