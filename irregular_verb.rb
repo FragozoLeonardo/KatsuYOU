@@ -111,6 +111,42 @@ class IrregularVerb < Word
         return aru_conjugations
     end
 
+    irr_keigo = word.include?('ござる') || word.include?('なさる') || word.include?('いらっしゃる') || word.include?('くださる') || word.include?('御座る') || word.include?('為さる') || word.include?('下さる')
+
+    if irr_keigo
+      honorific_aru_stem = word[-1] == "る" ? word[0...-1] : word[0]
+
+      keigo_aru_conjugations =
+        {
+          "Present" => word,
+          "Past" => "#{honorific_aru_stem}った",
+          "Negative" => "ない",
+          "Past negative" => "なかった",
+          "Polite present" => "#{honorific_aru_stem}ります",
+          "Polite past" => "#{honorific_aru_stem}りました",
+          "Polite negative" => "#{honorific_aru_stem}りません",
+          "Polite past negative" => "#{honorific_aru_stem}りませんでした",
+          "たら form" => "#{honorific_aru_stem}ったら",
+          "たら negative" => "なかったら",
+          "ば form" => "#{honorific_aru_stem}れば",
+          "ば negative" => "なければ",
+          "Conjunctive" => "#{honorific_aru_stem}って",
+          "Negative conjunctive" => "なくて",
+          "Without doing" => "#{honorific_aru_stem}らないで",
+          "'Formal' without doing" => "#{honorific_aru_stem}らずに",
+          "Volitional" => "#{honorific_aru_stem}ろう",
+          "Polite volitional" => "#{honorific_aru_stem}りましょう",
+          "Negative 'formal' volitional" => "#{honorific_aru_stem}るまい",
+          "First person desire" => "#{honorific_aru_stem}りたい",
+          "Third person desire" => "#{honorific_aru_stem}りたがる",
+          "Potential" => "#{honorific_aru_stem}える",
+          "Imperative" => "#{honorific_aru_stem}い",
+          "Negative imperative" => "#{honorific_aru_stem}るな",
+          "Old negative" => "#{honorific_aru_stem}らぬ / #{honorific_aru_stem}らん"
+        }
+        return keigo_aru_conjugations
+    end
+
     return iku_conjugations
   end
 end
