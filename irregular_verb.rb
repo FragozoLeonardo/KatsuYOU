@@ -75,6 +75,45 @@ class IrregularVerb < Word
       return kou_tou_conjugations
     end
 
+    irr_aru = word.include?('ある') || word.include?('有る') || word.include?('在る')
+
+    if irr_aru
+      aru_stem = word[-1] == "る" ? word[0...-1] : word[0]
+
+      aru_conjugations =
+        {
+          "Present" => word,
+          "Past" => "#{aru_stem}った",
+          "Negative" => "ない",
+          "Past negative" => "なかった",
+          "Polite present" => "#{aru_stem}ります",
+          "Polite past" => "#{aru_stem}りました",
+          "Polite negative" => "#{aru_stem}りません",
+          "Polite past negative" => "#{aru_stem}りませんでした",
+          "たら form" => "#{aru_stem}ったら",
+          "たら negative" => "なかったら",
+          "ば form" => "#{aru_stem}れば",
+          "ば negative" => "なければ",
+          "Conjunctive" => "#{aru_stem}って",
+          "Negative conjunctive" => "なくて",
+          "Without doing" => "#{aru_stem}らないで",
+          "'Formal' without doing" => "#{aru_stem}らずに",
+          "Volitional" => "#{aru_stem}ろう",
+          "Polite volitional" => "#{aru_stem}りましょう",
+          "Negative 'formal' volitional" => "#{aru_stem}るまい",
+          "First person desire" => "#{aru_stem}りたい",
+          "Third person desire" => "#{aru_stem}りたがる",
+          "Potential" => "#{aru_stem}れる",
+          "Passive" => "#{aru_stem}られる",
+          "Causative" => "#{aru_stem}らせる",
+          "Passive causative" => "#{aru_stem}らせられる",
+          "Imperative" => "#{aru_stem}れ",
+          "Negative imperative" => "#{aru_stem}るな",
+          "Old negative" => "#{aru_stem}らぬ / #{aru_stem}らん"
+        }
+        return aru_conjugations
+    end
+
     return iku_conjugations
   end
 end
