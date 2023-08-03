@@ -15,14 +15,11 @@ Once Ruby is installed, navigate to the folder where you have cloned this reposi
 ruby conjugator.rb
 ## Sample Images
 
-[![Leo-Katsu-CLI.png](https://i.postimg.cc/J4V99W3B/Leo-Katsu-CLI.png)](https://postimg.cc/RqdsHyDM)
-
+WIP.
 ## TODO List:
 
-- Add support for irregular verbs. Including less know て/た inflection irregulars such as 問う、乞う/請う as well honorific language (keigo) irregulars such as 下さる、いらっしゃる..
-- Make improvements to the menu usability.
-- Add Rspec specs for saving time on content proofreading and functionalities.
-- Improve the file structure in order to feel more OOP-esque.
+- Add support for irregular verbs. (As of 03/08/23 it's only lacking する and 来る related verbs).
+- Add Rspec specs for saving time on content proofreading and functionalities. (Once I get better on Rspec.)
 
 Please enjoy using the CLI! <3
 
