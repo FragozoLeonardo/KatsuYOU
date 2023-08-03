@@ -5,6 +5,8 @@ class GodanVerb < Word
     case word[-1]
     when "う"
       {
+        "Word" => word,
+        "Stem" => "#{stem}い",
         "Present" => word,
         "Past" => "#{stem}った",
         "Negative" => "#{stem}わない",
@@ -32,10 +34,13 @@ class GodanVerb < Word
         "Passive causative" => "#{stem}わせられる",
         "Imperative" => "#{stem}え",
         "Negative imperative" => "#{stem}うな",
+        "たり Form"  => "#{stem}ったり",
         "Old negative" => "#{stem}わぬ / #{stem}わん"
       }
     when "く"
       {
+        "Word" => word,
+        "Stem" => "#{stem}き",
         "Present" => word,
         "Past" => "#{stem}いた",
         "Negative" => "#{stem}かない",
@@ -63,10 +68,13 @@ class GodanVerb < Word
         "Passive causative" => "#{stem}かせられる",
         "Imperative" => "#{stem}け",
         "Negative imperative" => "#{stem}くな",
+        "たり Form" => "#{stem}いたり",
         "Old negative" => "#{stem}かぬ / #{stem}かん"
       }
     when "ぐ"
       {
+        "Word" => word,
+        "Stem" => "#{stem}ぎ",
         "Present" => word,
         "Past" => "#{stem}いだ",
         "Negative" => "#{stem}かない",
@@ -94,10 +102,13 @@ class GodanVerb < Word
         "Passive causative" => "#{stem}がせられる",
         "Imperative" => "#{stem}け",
         "Negative imperative" => "#{stem}ぐな",
+        "たり Form" => "#{stem}いだり",
         "Old negative" => "#{stem}がぬ / #{stem}がん"
       }
     when "す"
       {
+        "Word" => word,
+        "Stem" => "#{stem}し",
         "Present" => word,
         "Past" => "#{stem}した",
         "Negative" => "#{stem}さない",
@@ -125,10 +136,13 @@ class GodanVerb < Word
         "Passive causative" => "#{stem}させられる",
         "Imperative" => "#{stem}せ",
         "Negative imperative" => "#{stem}すな",
+        "たり Form" => "#{stem}したり",
         "Old negative" => "#{stem}さぬ / #{stem}さん"
       }
     when "つ"
       {
+        "Word" => word,
+        "Stem" => "#{stem}ち",
         "Present" => word,
         "Past" => "#{stem}った",
         "Negative" => "#{stem}たない",
@@ -156,10 +170,13 @@ class GodanVerb < Word
         "Passive causative" => "#{stem}たせられる",
         "Imperative" => "#{stem}て",
         "Negative imperative" => "#{stem}つな",
+        "たり Form" => "#{stem}ったり",
         "Old negative" => "#{stem}たぬ / #{stem}たん"
       }
     when "ぬ"
       {
+        "Word" => word,
+        "Stem" => "#{stem}に",
         "Present" => word,
         "Past" => "#{stem}んだ",
         "Negative" => "#{stem}なない",
@@ -187,10 +204,13 @@ class GodanVerb < Word
         "Passive causative" => "#{stem}なせられる",
         "Imperative" => "#{stem}ね",
         "Negative imperative" => "#{stem}ぬな",
+        "たり Form" => "#{stem}んだり",
         "Old negative" => "#{stem}なぬ / #{stem}なん"
       }
     when "ぶ"
       {
+        "Word" => word,
+        "Stem" => "#{stem}び",
         "Present" => word,
         "Past" => "#{stem}んだ",
         "Negative" => "#{stem}ばない",
@@ -218,10 +238,13 @@ class GodanVerb < Word
         "Passive causative" => "#{stem}ばせられる",
         "Imperative" => "#{stem}べ",
         "Negative imperative" => "#{stem}ぶば",
+        "たり Form" => "#{stem}んだり",
         "Old negative" => "#{stem}ばぶ / #{stem}ばん"
       }
     when "む"
       {
+        "Word" => word,
+        "Stem" => "#{stem}み",
         "Present" => word,
         "Past" => "#{stem}んだ",
         "Negative" => "#{stem}まない",
@@ -249,10 +272,13 @@ class GodanVerb < Word
         "Passive causative" => "#{stem}ませられる",
         "Imperative" => "#{stem}め",
         "Negative imperative" => "#{stem}むま",
+        "たり Form" => "#{stem}んだり",
         "Old negative" => "#{stem}まむ / #{stem}まん"
       }
     when "る"
       {
+        "Word" => word,
+        "Stem" => "#{stem}り",
         "Present" => word,
         "Past" => "#{stem}った",
         "Negative" => "#{stem}らない",
@@ -280,6 +306,7 @@ class GodanVerb < Word
         "Passive causative" => "#{stem}らせられる",
         "Imperative" => "#{stem}れ",
         "Negative imperative" => "#{stem}るな",
+        "たり Form" => "#{stem}ったり",
         "Old negative" => "#{stem}らぬ / #{stem}らん"
       }
     end

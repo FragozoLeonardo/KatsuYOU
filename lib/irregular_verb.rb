@@ -5,6 +5,8 @@ class IrregularVerb < Word
     iku_stem = word[-1] == "く" ? word[0...-1] : word[0]
 
     iku_conjugations = {
+      "Word" => word,
+      "Stem" => "#{iku_stem}き",
       "Present" => word,
       "Past" => "#{iku_stem}った",
       "Negative" => "#{iku_stem}かない",
@@ -32,6 +34,7 @@ class IrregularVerb < Word
       "Passive causative" => "#{iku_stem}かさせられる",
       "Imperative" => "#{iku_stem}け",
       "Negative imperative" => "#{iku_stem}くな",
+      "たり Form" => "#{iku_stem}ったり",
       "Old negative" => "#{iku_stem}かぬ / #{iku_stem}かん"
     }
 
@@ -42,6 +45,8 @@ class IrregularVerb < Word
 
       kou_tou_conjugations =
         {
+          "Word" => word,
+          "Stem" => "#{kou_tou_stem}い",
           "Present" => word,
           "Past" => "#{kou_tou_stem}うた",
           "Negative" => "#{kou_tou_stem}わない",
@@ -69,6 +74,7 @@ class IrregularVerb < Word
           "Passive causative" => "#{kou_tou_stem}わせられる",
           "Imperative" => "#{kou_tou_stem}え",
           "Negative imperative" => "#{kou_tou_stem}うな",
+          "たり Form" => "#{kou_tou_stem}うたり",
           "Old negative" => "#{kou_tou_stem}わぬ / #{kou_tou_stem}わん"
         }
 
@@ -82,6 +88,8 @@ class IrregularVerb < Word
 
       aru_conjugations =
         {
+          "Word" => word,
+          "Stem" => "#{aru_stem}り",
           "Present" => word,
           "Past" => "#{aru_stem}った",
           "Negative" => "ない",
@@ -106,6 +114,7 @@ class IrregularVerb < Word
           "Potential" => "#{aru_stem}りえる",
           "Imperative" => "#{aru_stem}れ",
           "Negative imperative" => "#{aru_stem}るな",
+          "たり Form" => "#{aru_stem}ったり",
           "Old negative" => "#{aru_stem}らぬ / #{aru_stem}らん"
         }
         return aru_conjugations
@@ -118,6 +127,8 @@ class IrregularVerb < Word
 
       keigo_aru_conjugations =
         {
+          "Word" => word,
+          "Stem" => "#{honorific_aru_stem}い",
           "Present" => word,
           "Past" => "#{honorific_aru_stem}った",
           "Negative" => "ない",
@@ -142,6 +153,7 @@ class IrregularVerb < Word
           "Potential" => "#{honorific_aru_stem}える",
           "Imperative" => "#{honorific_aru_stem}い",
           "Negative imperative" => "#{honorific_aru_stem}るな",
+          "たり Form" => "#{honorific_aru_stem}ったり",
           "Old negative" => "#{honorific_aru_stem}らぬ / #{honorific_aru_stem}らん"
         }
         return keigo_aru_conjugations

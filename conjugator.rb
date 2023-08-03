@@ -4,15 +4,15 @@ require_relative 'lib/ichidan_verb'
 require_relative 'lib/godan_verb'
 require_relative 'lib/irregular_verb'
 module Constants
-  VERSION = "v3.8.6"
+  VERSION = "v3.8.8"
   MENU_OPTIONS = {
-    "Names." => NaAdjectiveName,
-    "一段活用 / Group 1 / う Verbs." => IchidanVerb,
-    "五段活用 / Group 2 / る Verbs." => GodanVerb,
-    "変な活用 / Group 3 / Irregular Verbs." => IrregularVerb,
-    "名詞.形容動詞 / Names / な Adjectives." => NaAdjectiveName,
-    "形容詞 / い Adjectives." => IAdjective,
-    "変な形容詞 / (Irregular) い Adjectives." => IAdjective,
+    "Names (名詞)." => NaAdjectiveName,
+    "Group 1/る Verbs (一段活用)." => IchidanVerb,
+    "Group 2/う Verbs (五段活用)." => GodanVerb,
+    "Group 3/Irregular Verbs (変な活用)." => IrregularVerb,
+    "な Adjectives (形容動詞)." => NaAdjectiveName,
+    "い Adjectives (形容詞)." => IAdjective,
+    "Irregular) い Adjectives (変な形容詞)." => IAdjective,
     "Exit" => nil
   }.freeze
 end

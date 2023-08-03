@@ -4,6 +4,8 @@ class IchidanVerb < Word
     stem = word[0..-2]
 
     {
+      "Word" => word,
+      "Stem" => stem,
       "Present" => word,
       "Past" => "#{stem}た",
       "Negative" => "#{stem}ない",
@@ -31,6 +33,7 @@ class IchidanVerb < Word
       "Passive causative" => "#{stem}させられる",
       "Imperative" => "#{stem}ろ",
       "Negative imperative" => "#{stem}るな",
+      "たり Form" => "#{stem}たり",
       "Old negative" => "#{stem}ぬ / #{stem}ん"
     }
   end
