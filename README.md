@@ -1,4 +1,4 @@
-# KatsuYOU (活ヨウ), a Japanese language Conjugator CLI
+# KatsuYOU (活ユー), a Japanese language Conjugator CLI
 
 This is a small command-line interface (CLI) tool for generating inflections of verbs, adjectives and names in the Japanese language.
 
