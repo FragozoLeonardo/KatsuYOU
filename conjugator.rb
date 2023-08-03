@@ -1,8 +1,22 @@
-require_relative 'i_adjective'
-require_relative 'na_adjective_name'
-require_relative 'ichidan_verb'
-require_relative 'godan_verb'
-require_relative 'irregular_verb'
+require_relative 'lib/i_adjective'
+require_relative 'lib/na_adjective_name'
+require_relative 'lib/ichidan_verb'
+require_relative 'lib/godan_verb'
+require_relative 'lib/irregular_verb'
+module Constants
+  VERSION = "v3.8.6"
+  MENU_OPTIONS = {
+    "Names." => NaAdjectiveName,
+    "一段活用 / Group 1 / う Verbs." => IchidanVerb,
+    "五段活用 / Group 2 / る Verbs." => GodanVerb,
+    "変な活用 / Group 3 / Irregular Verbs." => IrregularVerb,
+    "名詞.形容動詞 / Names / な Adjectives." => NaAdjectiveName,
+    "形容詞 / い Adjectives." => IAdjective,
+    "変な形容詞 / (Irregular) い Adjectives." => IAdjective,
+    "Exit" => nil
+  }.freeze
+end
+
 class Conjugator
   def initialize
     @words = []
@@ -23,97 +37,39 @@ class Conjugator
   end
 end
 
+def display_menu
+  puts " 活ヨウ - KatsuYou - a CLI by Leonardo Quadros Fragozo #{Constants::VERSION}"
+  puts "\n"
+  puts " What do you want to conjugate? - Type the number to select the option."
+  puts "\n"
+  Constants::MENU_OPTIONS.each_with_index do |(option, _), index|
+    puts "#{index + 1} - #{option}"
+  end
+end
+
+def get_user_input(prompt)
+  print prompt
+  gets.chomp
+end
+
 conjugator = Conjugator.new
 
 loop do
-  puts " 活ヨウ - KatsuYou - a CLI by Leonardo Quadros Fragozo v3.6.6"
-  puts "What do you want to conjugate?"
-  puts "1 - 変な形容詞 - (Irregular い adjectives)"
-  puts "2 - 普通の形容詞 - (Regular い Adjectives)"
-  puts "3 - 形容動詞 - (な Adjectives)"
-  puts "4 - 名詞 - (Names)"
-  puts "5 - 一段活用動詞 - (る / group 1 Verbs)"
-  puts "6 - 五段活用動詞 - (う / group 2 Verbs)"
-  puts "7 - 変な活用動詞 - (Irregular / group 3 Verbs)"
-  puts "8 - Exit"
-
-  print "Enter your choice (1-8): "
+  display_menu
+  print "Enter your choice (1-#{Constants::MENU_OPTIONS.size}): "
   choice = gets.chomp.to_i
 
-  case choice
-  when 1
-    print "Enter an irregular い adjective - such as 「いい」, 「かっこいい」, etc: "
-    adjective_i = gets.chomp
+  selected_option = Constants::MENU_OPTIONS.to_a[choice - 1]
+  break if selected_option.nil?
 
-    i_adjective = IAdjective.new(adjective_i)
-    conjugator.add_word(i_adjective)
+  word_class = selected_option[1]
+  print "Enter the word: "
+  word = gets.chomp
 
-    conjugator.conjugate_all
+  word_object = word_class.new(word)
+  conjugator.add_word(word_object)
 
-    puts "\n"
-  when 2
-    print "Enter a regular い adjective: "
-    adjective_i = gets.chomp
+  conjugator.conjugate_all
 
-    i_adjective = IAdjective.new(adjective_i)
-    conjugator.add_word(i_adjective)
-
-    conjugator.conjugate_all
-
-    puts "\n"
-  when 3
-    print "Enter a な adjective in it's dictionary form - example: 「元気」"
-    name_adjective_na = gets.chomp
-    na_adjective_name = NaAdjectiveName.new(name_adjective_na)
-    conjugator.add_word(na_adjective_name)
-
-    conjugator.conjugate_all
-
-    puts "\n"
-  when 4
-    print "Enter a name: "
-    name_adjective_na = gets.chomp
-
-    na_adjective_name = NaAdjectiveName.new(name_adjective_na)
-    conjugator.add_word(na_adjective_name)
-
-    conjugator.conjugate_all
-
-    puts "\n"
-  when 5
-    print "Enter a regular 一段 (る) / group 1 verb: "
-    ichidan_verb = gets.chomp
-
-    ru_verb = IchidanVerb.new(ichidan_verb)
-    conjugator.add_word(ru_verb)
-
-    conjugator.conjugate_all
-
-    puts "\n"
-  when 6
-    print "Enter a regular 五段 (う) / group 2 verb: "
-    godan_verb = gets.chomp
-
-    u_verb = GodanVerb.new(godan_verb)
-    conjugator.add_word(u_verb)
-
-    conjugator.conjugate_all
-
-    puts "\n"
-  when 7
-    print "Enter a irregular (変な活用動詞) (行く、する、来る、いらっしゃる etc.) verb: "
-    irregular_verb = gets.chomp
-
-    odd_verb = IrregularVerb.new(irregular_verb)
-    conjugator.add_word(odd_verb)
-
-    conjugator.conjugate_all
-
-    puts "\n"
-  when 8
-    break
-  else
-    puts "Invalid choice. Please enter a valid option."
-    puts "\n"
-  end
+  puts "\n"
 end
