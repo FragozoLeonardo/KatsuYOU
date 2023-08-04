@@ -7,22 +7,24 @@ class IrregularVerb < Word
 
   def conjugate
     if kou_tou?
-      return kou_tou_conjugations
+      kou_tou_conjugations
     elsif aru?
-      return aru_conjugations
+      aru_conjugations
     elsif keigo?
-      return keigo_aru_conjugations
+      keigo_aru_conjugations
     elsif kuru?
-      return kuru_conjugations
+      kuru_conjugations
+    elsif suru?
+      suru_conjugations
     else
-      return iku_conjugations
+      iku_conjugations
     end
   end
 
   private
 
   def iku_stem
-    word[-1] == "く" ? word[0...-1] : word[0]
+    word[-1] == "く" ? word[0...-1] : word
   end
 
   def iku_conjugations
@@ -67,7 +69,7 @@ class IrregularVerb < Word
   end
 
   def kou_tou_stem
-    word[-1] == "う" ? word[0...-1] : word[0]
+    word[-1] == "う" ? word[0...-1] : word
   end
 
   def kou_tou_conjugations
@@ -112,7 +114,7 @@ class IrregularVerb < Word
   end
 
   def aru_stem
-    word[-1] == "る" ? word[0...-1] : word[0]
+    word[-1] == "る" ? word[0...-1] : word
   end
 
   def aru_conjugations
@@ -154,7 +156,7 @@ class IrregularVerb < Word
   end
 
   def honorific_aru_stem
-    word[-1] == "る" ? word[0...-1] : word[0]
+    word[-1] == "る" ? word[0...-1] : word
   end
 
   def keigo_aru_conjugations
@@ -184,8 +186,9 @@ class IrregularVerb < Word
       "First person desire" => "#{honorific_aru_stem}いたい",
       "Third person desire" => "#{honorific_aru_stem}いたがる",
       "Potential" => "#{honorific_aru_stem}える",
+      "Passive" => "#{honorific_aru_stem}させる",
       "Causative" => "#{honorific_aru_stem}らせる",
-      "Passive causative" => "#{honorific_aru_stem}せられる",
+      "Passive causative" => "#{honorific_aru_stem}させられる",
       "Imperative" => "#{honorific_aru_stem}い",
       "Negative imperative" => "#{honorific_aru_stem}るな",
       "たり Form" => "#{honorific_aru_stem}ったり",
@@ -194,14 +197,14 @@ class IrregularVerb < Word
   end
 
   def kuru?
-    word.end_with?("くる", "来る")  # Check if the word ends with "くる" or "来る"
+    word.end_with?("くる", "来る")
   end
 
   def kuru_masu_stem
     if word.end_with?("くる")
-      word[0..-3] + "き"  # Use "くる" stem
+      word[0..-3] + "き"
     elsif word.end_with?("来る")
-      word[0..-3] + "来"  # Use "来る" stem
+      word[0..-3] + "来"
     else
       raise "Invalid verb type for kuru_masu_stem()"
     end
@@ -209,9 +212,9 @@ class IrregularVerb < Word
 
   def kuru_neg_stem
     if word.end_with?("くる")
-      word[0..-3] + "こ"  # Use "くる" stem
+      word[0..-3] + "こ"
     elsif word.end_with?("来る")
-      word[0..-3] + "来"  # Use "来る" stem
+      word[0..-3] + "来"
     else
       raise "Invalid verb type for kuru_neg_stem()"
     end
@@ -219,9 +222,9 @@ class IrregularVerb < Word
 
   def kuru_if_stem
     if word.end_with?("くる")
-      word[0..-3] + "け"  # Use "くる" stem
+      word[0..-3] + "け"
     elsif word.end_with?("来る")
-      word[0..-3] + "来"  # Use "来る" stem
+      word[0..-3] + "来"
     else
       raise "Invalid verb type for kuru_if_stem()"
     end
@@ -229,9 +232,9 @@ class IrregularVerb < Word
 
   def kuru_jisho_stem
     if word.end_with?("くる")
-      word[0..-3] + "く"  # Use "くる" stem
+      word[0..-3] + "く"
     elsif word.end_with?("来る")
-      word[0..-3] + "来"  # Use "来る" stem
+      word[0..-3] + "来"
     else
       raise "Invalid verb type for kuru_jisho_stem()"
     end
@@ -267,12 +270,108 @@ class IrregularVerb < Word
       "First person desire" => "#{kuru_masu_stem}たい",
       "Third person desire" => "#{kuru_masu_stem}たがる",
       "Potential" => "#{kuru_neg_stem}られる",
+      "Passive" => "#{kuru_neg_stem}られる",
       "Causative" => "#{kuru_neg_stem}させる",
       "Passive causative" => "#{kuru_neg_stem}させられる",
       "Imperative" => "#{kuru_neg_stem}よう",
       "Negative imperative" => "#{kuru_jisho_stem}るな",
       "たり Form" => "#{kuru_masu_stem}ったり",
       "Old negative" => "#{kuru_neg_stem}らぬ / #{kuru_neg_stem}らん"
+    }
+  end
+
+  def suru?
+    word.end_with?("する", "為る")
+  end
+
+  def suru_i_stem
+    if word.end_with?("する")
+      word[0..-3] + "し"
+    elsif word.end_with?("為る")
+      word[0..-3] + "為"
+    else
+      raise "Invalid verb type for suru_i_stem()"
+    end
+  end
+
+  def suru_a_stem
+    if word.end_with?("する")
+      word[0..-3] + "さ"
+    elsif word.end_with?("為る")
+      word[0..-3] + "為"
+    else
+      raise "Invalid verb type for suru_a_stem()"
+    end
+  end
+
+  def suru_u_stem
+    if word.end_with?("する")
+      word[0..-3] + "す"
+    elsif word.end_with?("為る")
+      word[0..-3] + "為"
+    else
+      raise "Invalid verb type for suru_u_stem()"
+    end
+  end
+
+  def suru_e_stem
+    if word.end_with?("する")
+      word[0..-3] + "せ"
+    elsif word.end_with?("為る")
+      word[0..-3] + "為"
+    else
+      raise "Invalid verb type for suru_e_stem()"
+    end
+  end
+
+  def suru_dekiru
+    if word.end_with?("する")
+      word[0..-3] + "できる"
+    elsif word.end_with?("為る")
+      word[0..-3] + "出来る"
+    else
+      raise "Invalid verb type for suru_dekiru()"
+    end
+  end
+
+  def suru_conjugations
+    suru_i_stem = suru_i_stem()
+    suru_a_stem = suru_a_stem()
+    suru_u_stem = suru_u_stem()
+    suru_e_stem = suru_e_stem()
+    suru_dekiru = suru_dekiru()
+    {
+      'Word' => word,
+      'Stem' => "#{suru_i_stem}",
+      'Present' => "#{word}",
+      'Past' => "#{suru_i_stem}た",
+      'Negative' => "#{suru_i_stem}ない",
+      "Past negative" => "#{suru_i_stem}なかった",
+      "Polite present" => "#{suru_i_stem}ます",
+      "Polite past" => "#{suru_i_stem}ました",
+      "Polite negative" => "#{suru_i_stem}ません",
+      "Polite past negative" => "#{suru_i_stem}ませんでした",
+      "たら form" => "#{suru_i_stem}たら",
+      "たら negative" => "#{suru_i_stem}なかったら",
+      "ば form" => "#{suru_u_stem}れば",
+      "ば negative" => "#{suru_i_stem}なければ",
+      "Conjunctive" => "#{suru_i_stem}て",
+      "Negative conjunctive" => "#{suru_i_stem}なくて",
+      "Without doing" => "#{suru_i_stem}ないで",
+      "'Formal' without doing" => "#{suru_e_stem}ずに",
+      "Volitional" => "#{suru_i_stem}よう",
+      "Polite volitional" => "#{suru_i_stem}ましょう",
+      "Negative 'formal' volitional" => "#{word}まい",
+      "First person desire" => "#{suru_i_stem}たい",
+      "Third person desire" => "#{suru_i_stem}たがる",
+      "Potential" => "#{suru_dekiru}",
+      "Passivee" => "#{suru_a_stem}される",
+      "Causative" => "#{suru_a_stem}させる",
+      "Passive causative" => "#{suru_a_stem}せられる",
+      "Imperative" => "#{suru_i_stem}ろ / #{suru_e_stem}よ",
+      "Negative imperative" => "#{word}な",
+      "たり Form" => "#{suru_i_stem}たり",
+      "Old negative" => "#{suru_e_stem}ぬ / #{suru_e_stem}ん"
     }
   end
 end

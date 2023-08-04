@@ -1,4 +1,5 @@
 require_relative 'word'
+
 class GodanVerb < Word
   def conjugate
     stem = word[0..-2]
@@ -34,7 +35,7 @@ class GodanVerb < Word
         "Passive causative" => "#{stem}わせられる",
         "Imperative" => "#{stem}え",
         "Negative imperative" => "#{stem}うな",
-        "たり Form"  => "#{stem}ったり",
+        "たり Form" => "#{stem}ったり",
         "Old negative" => "#{stem}わぬ / #{stem}わん"
       }
     when "く"
@@ -281,20 +282,20 @@ class GodanVerb < Word
         "Stem" => "#{stem}り",
         "Present" => word,
         "Past" => "#{stem}った",
-        "Negative" => "#{stem}らない",
-        "Past negative" => "#{stem}らなかった",
-        "Polite present" => "#{stem}ります",
-        "Polite past" => "#{stem}りました",
-        "Polite negative" => "#{stem}りません",
-        "Polite past negative" => "#{stem}りませんでした",
+        "Negative" => "#{stem}ない",
+        "Past negative" => "#{stem}なかった",
+        "Polite present" => "#{stem}ます",
+        "Polite past" => "#{stem}ました",
+        "Polite negative" => "#{stem}ません",
+        "Polite past negative" => "#{stem}ませんでした",
         "たら form" => "#{stem}ったら",
-        "たら negative" => "#{stem}らなかったら",
+        "たら negative" => "#{stem}なかったら",
         "ば form" => "#{stem}れば",
         "ば negative" => "#{stem}ってなければ",
         "Conjunctive" => "#{stem}って",
-        "Negative conjunctive" => "#{stem}ってなくて",
-        "Without doing" => "#{stem}らないで",
-        "'Formal' without doing" => "#{stem}らずに",
+        "Negative conjunctive" => "#{stem}なくて",
+        "Without doing" => "#{stem}ないで",
+        "'Formal' without doing" => "#{stem}ずに",
         "Volitional" => "#{stem}ろう",
         "Polite volitional" => "#{stem}りましょう",
         "Negative 'formal' volitional" => "#{stem}るまい",
@@ -302,9 +303,9 @@ class GodanVerb < Word
         "Third person desire" => "#{stem}りたがる",
         "Potential" => "#{stem}れる",
         "Passive" => "#{stem}られる",
-        "Causative" => "#{stem}らせる",
-        "Passive causative" => "#{stem}らせられる",
-        "Imperative" => "#{stem}れ",
+        "Causative" => "#{stem}させる",
+        "Passive causative" => "#{stem}させられる",
+        "Imperative" => "#{stem}ろ",
         "Negative imperative" => "#{stem}るな",
         "たり Form" => "#{stem}ったり",
         "Old negative" => "#{stem}らぬ / #{stem}らん"

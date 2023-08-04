@@ -3,8 +3,9 @@ require_relative 'lib/na_adjective_name'
 require_relative 'lib/ichidan_verb'
 require_relative 'lib/godan_verb'
 require_relative 'lib/irregular_verb'
+
 module Constants
-  VERSION = "v3.8.8"
+  VERSION = "v3.9.3"
   MENU_OPTIONS = {
     "Names (名詞)." => NaAdjectiveName,
     "Group 1/る Verbs (一段活用)." => IchidanVerb,
@@ -32,44 +33,58 @@ class Conjugator
       conjugations.each do |form, value|
         puts "#{form}: #{value}"
       end
-      puts "\n"
     end
   end
 end
 
+def ask_conjugate_another_word?
+  while true
+    print "Do you want to conjugate another word? (y/n): "
+    choice = gets.chomp.downcase
+    return true if choice == 'y'
+    return false if choice == 'n'
+    puts "Invalid choice. Please enter 'y' for yes or 'n' for no."
+  end
+end
+
 def display_menu
-  puts " 活ヨウ - KatsuYou - a CLI by Leonardo Quadros Fragozo #{Constants::VERSION}"
-  puts "\n"
-  puts " What do you want to conjugate? - Type the number to select the option."
-  puts "\n"
+  puts(" 活ヨウ - KatsuYou - a CLI by Leonardo Quadros Fragozo #{Constants::VERSION}")
+  puts("\n")
+  puts(" What do you want to conjugate? - Type the number to select the option.")
+  puts("\n")
   Constants::MENU_OPTIONS.each_with_index do |(option, _), index|
-    puts "#{index + 1} - #{option}"
+    puts("#{index + 1} - #{option}")
   end
 end
 
 def get_user_input(prompt)
-  print prompt
+  print(prompt)
   gets.chomp
 end
 
 conjugator = Conjugator.new
 
-loop do
+while true
   display_menu
-  print "Enter your choice (1-#{Constants::MENU_OPTIONS.size}): "
+  print("Enter your choice (1-#{Constants::MENU_OPTIONS.size}): ")
   choice = gets.chomp.to_i
 
-  selected_option = Constants::MENU_OPTIONS.to_a[choice - 1]
-  break if selected_option.nil?
+  if choice.between?(1, Constants::MENU_OPTIONS.size - 1)
+    selected_option = Constants::MENU_OPTIONS.to_a[choice - 1]
+    word_class = selected_option[1]
 
-  word_class = selected_option[1]
-  print "Enter the word: "
-  word = gets.chomp
+    print("Enter the word: ")
+    word = gets.chomp
 
-  word_object = word_class.new(word)
-  conjugator.add_word(word_object)
+    word_object = word_class.new(word)
+    conjugator.add_word(word_object)
 
-  conjugator.conjugate_all
+    conjugator.conjugate_all
 
-  puts "\n"
+    break unless ask_conjugate_another_word?
+  else
+    puts("Invalid option. Please select a valid option (1-#{Constants::MENU_OPTIONS.size - 1}).")
+  end
+
+  puts
 end
