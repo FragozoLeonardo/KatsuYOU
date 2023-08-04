@@ -117,7 +117,8 @@ class IrregularVerb < Word
           "たり Form" => "#{aru_stem}ったり",
           "Old negative" => "#{aru_stem}らぬ / #{aru_stem}らん"
         }
-        return aru_conjugations
+
+      return aru_conjugations
     end
 
     irr_keigo = word.include?('ござる') || word.include?('なさる') || word.include?('いらっしゃる') || word.include?('くださる') || word.include?('御座る') || word.include?('為さる') || word.include?('下さる')
@@ -156,9 +157,24 @@ class IrregularVerb < Word
           "たり Form" => "#{honorific_aru_stem}ったり",
           "Old negative" => "#{honorific_aru_stem}らぬ / #{honorific_aru_stem}らん"
         }
-        return keigo_aru_conjugations
+
+      return keigo_aru_conjugations
     end
 
-    return iku_conjugations
+    if word == "来る" || word == "くる"
+      kuru_masu_stem = word == "くる" ? "き" : "来"
+      kuru_neg_stem = word == "くる" ? "こ" : "来"
+
+      kuru_conjugations = {
+        'Word' => word,
+        'Stem' => "#{kuru_masu_stem}",
+        'Present' => "#{word}",
+        'Past' => "#{kuru_masu_stem}た",
+        'Negative' => "#{kuru_neg_stem}ない",
+      }
+
+      return kuru_conjugations
+      
+    end
   end
 end
