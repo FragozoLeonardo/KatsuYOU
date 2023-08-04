@@ -5,7 +5,9 @@ class IAdjective < Word
     stem =
       case word
       when "いい"
-        "よ"
+      "よ"
+      when "良い"
+      "良"
       when /いい\z/
         word[0..-3] + "よ"
       else
@@ -30,8 +32,7 @@ class IAdjective < Word
       "Conjunctive" => "#{stem}くて",
       "Negative conjunctive" => "#{stem}くなくて",
       "Adverbial" => "#{stem}く",
-      "Degree" => "#{stem}さ",
-      "Degree negative" => "#{stem}くなさ",
+      "Nominal" => "#{stem}さ",
       "Volitional" => "#{stem}かろう - Rare"
     }
   end

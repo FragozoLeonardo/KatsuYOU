@@ -1,5 +1,6 @@
+require_relative 'lib/name'
 require_relative 'lib/i_adjective'
-require_relative 'lib/na_adjective_name'
+require_relative 'lib/na_adjective'
 require_relative 'lib/ichidan_verb'
 require_relative 'lib/godan_verb'
 require_relative 'lib/irregular_verb'
@@ -7,11 +8,11 @@ require_relative 'lib/irregular_verb'
 module Constants
   VERSION = "5.0"
   MENU_OPTIONS = {
-    "Names (名詞)." => NaAdjectiveName,
+    "Names (名詞)." => Name,
     "Group 1/る Verbs (一段活用)." => IchidanVerb,
     "Group 2/う Verbs (五段活用)." => GodanVerb,
     "Group 3/Irregular Verbs (変な活用)." => IrregularVerb,
-    "な Adjectives (形容動詞)." => NaAdjectiveName,
+    "な Adjectives (形容動詞)." => NaAdjective,
     "い Adjectives (形容詞)." => IAdjective,
     "Irregular) い Adjectives (変な形容詞)." => IAdjective,
     "Exit" => nil

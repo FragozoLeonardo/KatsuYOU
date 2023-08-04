@@ -1,7 +1,9 @@
-class NaAdjectiveName < Word
+require_relative 'word'
+
+class NaAdjective < Word
   def conjugate
     {
-      "word" => word,
+      "Word" => word,
       "Stem" => word,
       "Present" => "#{word}だ",
       "Past" => "#{word}だった",
@@ -17,6 +19,8 @@ class NaAdjectiveName < Word
       "ば negative" => "#{word}ではなければ / #{word}じゃなかったら",
       "Conjunctive" => "#{word}で",
       "Negative conjunctive" => "#{word}ではなくて / #{word}じゃなくて",
+      "Adverbial" => "#{word}に",
+      "Nominal" => "#{word}さ",
       "Speculative" => "#{word}でしょう / #{word}だろう"
     }
   end
