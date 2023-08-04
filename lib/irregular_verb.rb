@@ -194,23 +194,47 @@ class IrregularVerb < Word
   end
 
   def kuru?
-    word == "くる" || "来る"
+    word.end_with?("くる", "来る")  # Check if the word ends with "くる" or "来る"
   end
 
   def kuru_masu_stem
-    word == "くる" ? "き" : "来"
+    if word.end_with?("くる")
+      word[0..-3] + "き"  # Use "くる" stem
+    elsif word.end_with?("来る")
+      word[0..-3] + "来"  # Use "来る" stem
+    else
+      raise "Invalid verb type for kuru_masu_stem()"
+    end
   end
 
   def kuru_neg_stem
-    word == "くる" ? "こ" : "来"
+    if word.end_with?("くる")
+      word[0..-3] + "こ"  # Use "くる" stem
+    elsif word.end_with?("来る")
+      word[0..-3] + "来"  # Use "来る" stem
+    else
+      raise "Invalid verb type for kuru_neg_stem()"
+    end
   end
 
   def kuru_if_stem
-    word == "くる" ? "け" : "来"
+    if word.end_with?("くる")
+      word[0..-3] + "け"  # Use "くる" stem
+    elsif word.end_with?("来る")
+      word[0..-3] + "来"  # Use "来る" stem
+    else
+      raise "Invalid verb type for kuru_if_stem()"
+    end
   end
 
   def kuru_jisho_stem
-    word == "くる" ? "く" : "来"
+    if word.end_with?("くる")
+      word[0..-3] + "く"  # Use "くる" stem
+    elsif word.end_with?("来る")
+      word[0..-3] + "来"  # Use "来る" stem
+    else
+      raise "Invalid verb type for kuru_jisho_stem()"
+    end
   end
 
   def kuru_conjugations
