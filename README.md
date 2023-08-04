@@ -15,8 +15,8 @@ ruby conjugator.rb
 WIP
 ## TODO List:
 
-- Add Rspec specs for improve content proofreading based on native resources and CLI functionalities. (Once I get better on Rspec.)
-- Take propper sceenshots for the Readme
+- Add Rspec specs for content proofreading based on native resources and CLI functionalities. (Once I get better on Rspec.)
+- Take propper screenshots for the readme
 - "Deploy" the CLI at repl.it
 
 Please enjoy using the CLI! <3
