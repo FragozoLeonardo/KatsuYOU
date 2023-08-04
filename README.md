@@ -12,11 +12,9 @@ Once Ruby is installed, navigate to the folder where you have cloned this reposi
 
 ruby conjugator.rb
 ## Sample Images
-
-WIP.
+WIP
 ## TODO List:
 
-- Add support for irregular verbs. (As of 03/08/23 it's only lacking する and 来る related verbs).
 - Add Rspec specs for saving time on content proofreading and functionalities. (Once I get better on Rspec.)
 
 Please enjoy using the CLI! <3
