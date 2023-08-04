@@ -5,7 +5,7 @@ require_relative 'lib/godan_verb'
 require_relative 'lib/irregular_verb'
 
 module Constants
-  VERSION = "v3.9.3"
+  VERSION = "5.0"
   MENU_OPTIONS = {
     "Names (名詞)." => NaAdjectiveName,
     "Group 1/る Verbs (一段活用)." => IchidanVerb,
