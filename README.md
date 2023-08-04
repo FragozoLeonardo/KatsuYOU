@@ -16,6 +16,8 @@ WIP
 ## TODO List:
 
 - Add Rspec specs for improve content proofreading based on native resources and CLI functionalities. (Once I get better on Rspec.)
+- Take propper sceenshots for the Readme
+- "Deploy" the CLI at repl.it
 
 Please enjoy using the CLI! <3
 
