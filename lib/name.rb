@@ -15,10 +15,11 @@ class Name < Word
       "Polite past negative" => "#{word}ではなかったです / #{word}じゃなかったです / #{word}ではありませんでした / #{word}じゃありませんでした",
       "たら form" => "#{word}だったら",
       "たら negative" => "#{word}ではなかったら / #{word}じゃなかったら",
-      "ば form" => "#{word}なら（ば）",
+      "ば form" => " #{word}であれば / #{word}なら（ば）",
       "ば negative" => "#{word}ではなければ / #{word}じゃなかったら",
       "Conjunctive" => "#{word}で",
       "Negative conjunctive" => "#{word}ではなくて / #{word}じゃなくて",
+      "たり form" => "#{word}だったり",
       "Speculative" => "#{word}でしょう / #{word}だろう"
     }
   end
