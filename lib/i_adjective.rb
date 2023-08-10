@@ -31,6 +31,7 @@ class IAdjective < Word
       "ば negative" => "#{stem}くなければ",
       "Conjunctive" => "#{stem}くて",
       "Negative conjunctive" => "#{stem}くなくて",
+      "たり form" => "#{stem}かったり",
       "Adverbial" => "#{stem}く",
       "Nominal" => "#{stem}さ",
       "Volitional" => "#{stem}かろう - Rare"
