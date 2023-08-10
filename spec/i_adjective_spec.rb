@@ -7,7 +7,6 @@ RSpec.describe IAdjective do
     let(:kanji_stem) { "優し" }
     let(:kana_stem) { "やさし" }
 
-
     context 'for kanji い adjective' do
       it 'generates the expected conjugations' do
         i_adjective = IAdjective.new(kanji_adjective)
@@ -70,7 +69,6 @@ RSpec.describe IAdjective do
     let(:kana_adjective_ii) { "いい" }
     let(:kanji_stem_ii) { "良" }
     let(:kana_stem_ii) { "よ" }
-
 
     context 'for kanji いい adjective' do
       it 'generates the expected conjugations' do
