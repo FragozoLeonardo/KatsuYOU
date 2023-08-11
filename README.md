@@ -12,12 +12,9 @@ Once Ruby is installed, navigate to the folder where you have cloned this reposi
 
 ruby conjugator.rb
 ## Sample Images
-WIP
-## TODO List:
-
-- Take propper screenshots for the readme
-- "Deploy" the CLI at repl.it
+[![cli-katsu.png](https://i.postimg.cc/SQYGXCBP/cli-katsu.png)](https://postimg.cc/ThGbFLYj)
 
 Please enjoy using the CLI! <3
 
 Feel free to provide feedback or report any issues you encounter. Contributions are welcome!
+n
