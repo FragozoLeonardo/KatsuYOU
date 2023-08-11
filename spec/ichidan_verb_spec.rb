@@ -4,7 +4,7 @@ RSpec.describe IchidanVerb do
   context 'with a kanji verb' do
     let(:kanji_verb) { "食べる" }
 
-    it 'generates the expected conjugations for kanji ichidan verb' do
+    it 'generates the expected conjugations for kanji ichidan verbs' do
       ichidan_verb = IchidanVerb.new(kanji_verb)
       conjugations = ichidan_verb.conjugate
 
@@ -44,7 +44,7 @@ RSpec.describe IchidanVerb do
     end
   end
 
-  context 'with a kana verb' do
+  context 'with a kana verbs' do
     let(:kana_verb) { "たべる" }
 
     it 'generates the expected conjugations for kana ichidan verb' do
