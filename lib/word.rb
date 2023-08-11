@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Word
   attr_reader :word
 
@@ -6,6 +8,6 @@ class Word
   end
 
   def conjugate
-    raise NotImplementedError, "Conjugation method not implemented."
+    raise NotImplementedError, 'Conjugation method not implemented.'
   end
 end
