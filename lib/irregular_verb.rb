@@ -21,8 +21,6 @@ class IrregularVerb < Word
     end
   end
 
-  private
-
   def iku_stem
     word[-1] == "く" ? word[0...-1] : word
   end
@@ -88,7 +86,7 @@ class IrregularVerb < Word
       "たら form" => "#{kou_tou_stem}ったら",
       "たら negative" => "#{kou_tou_stem}わなかったら",
       "ば form" => "#{kou_tou_stem}えば",
-      "ば negative" => "#{kou_tou_stem}なければ",
+      "ば negative" => "#{kou_tou_stem}わなければ",
       "Conjunctive" => "#{kou_tou_stem}うて",
       "Negative conjunctive" => "#{kou_tou_stem}わなくて",
       "Without doing" => "#{kou_tou_stem}わないで",
@@ -168,10 +166,10 @@ class IrregularVerb < Word
       "Past" => "#{honorific_aru_stem}った",
       "Negative" => "#{honorific_aru_stem}ない",
       "Past negative" => "#{honorific_aru_stem}なかった",
-      "Polite present" => "#{honorific_aru_stem}ります",
-      "Polite past" => "#{honorific_aru_stem}りました",
-      "Polite negative" => "#{honorific_aru_stem}りません",
-      "Polite past negative" => "#{honorific_aru_stem}りませんでした",
+      "Polite present" => "#{honorific_aru_stem}います",
+      "Polite past" => "#{honorific_aru_stem}いました",
+      "Polite negative" => "#{honorific_aru_stem}いません",
+      "Polite past negative" => "#{honorific_aru_stem}いませんでした",
       "たら form" => "#{honorific_aru_stem}ったら",
       "たら negative" => "#{honorific_aru_stem}なかったら",
       "ば form" => "#{honorific_aru_stem}れば",
@@ -186,9 +184,9 @@ class IrregularVerb < Word
       "First person desire" => "#{honorific_aru_stem}いたい",
       "Third person desire" => "#{honorific_aru_stem}いたがる",
       "Potential" => "#{honorific_aru_stem}える",
-      "Passive" => "#{honorific_aru_stem}させる",
+      "Passive" => "#{honorific_aru_stem}られる",
       "Causative" => "#{honorific_aru_stem}らせる",
-      "Passive causative" => "#{honorific_aru_stem}させられる",
+      "Passive causative" => "#{honorific_aru_stem}らせられる",
       "Imperative" => "#{honorific_aru_stem}い",
       "Negative imperative" => "#{honorific_aru_stem}るな",
       "たり Form" => "#{honorific_aru_stem}ったり",
@@ -259,23 +257,23 @@ class IrregularVerb < Word
       "たら form" => "#{kuru_masu_stem}たら",
       "たら negative" => "#{kuru_neg_stem}なかったら",
       "ば form" => "#{kuru_if_stem}れば",
-      "ば negative" => "#{kuru_neg_stem}なければ",
-      "Conjunctive" => "#{kuru_masu_stem}って",
-      "Negative conjunctive" => "#{kuru_neg_stem}なくって",
+      "ば negative" => "#{kuru_if_stem}なければ",
+      "Conjunctive" => "#{kuru_masu_stem}て",
+      "Negative conjunctive" => "#{kuru_neg_stem}なくて",
       "Without doing" => "#{kuru_neg_stem}ないで",
-      "'Formal' without doing" => "#{kuru_neg_stem}らずに",
+      "'Formal' without doing" => "#{kuru_neg_stem}ずに",
       "Volitional" => "#{kuru_neg_stem}よう",
       "Polite volitional" => "#{kuru_masu_stem}ましょう",
-      "Negative 'formal' volitional" => "#{kuru_neg_stem}まい",
+      "Negative 'formal' volitional" => "#{kuru_jisho_stem}まい",
       "First person desire" => "#{kuru_masu_stem}たい",
       "Third person desire" => "#{kuru_masu_stem}たがる",
       "Potential" => "#{kuru_neg_stem}られる",
       "Passive" => "#{kuru_neg_stem}られる",
       "Causative" => "#{kuru_neg_stem}させる",
       "Passive causative" => "#{kuru_neg_stem}させられる",
-      "Imperative" => "#{kuru_neg_stem}よう",
+      "Imperative" => "#{kuru_neg_stem}い",
       "Negative imperative" => "#{kuru_jisho_stem}るな",
-      "たり Form" => "#{kuru_masu_stem}ったり",
+      "たり Form" => "#{kuru_masu_stem}たり",
       "Old negative" => "#{kuru_neg_stem}らぬ / #{kuru_neg_stem}らん"
     }
   end
@@ -365,8 +363,8 @@ class IrregularVerb < Word
       "First person desire" => "#{suru_i_stem}たい",
       "Third person desire" => "#{suru_i_stem}たがる",
       "Potential" => "#{suru_dekiru}",
-      "Passivee" => "#{suru_a_stem}される",
-      "Causative" => "#{suru_a_stem}させる",
+      "Passivee" => "#{suru_a_stem}れる",
+      "Causative" => "#{suru_a_stem}せる",
       "Passive causative" => "#{suru_a_stem}せられる",
       "Imperative" => "#{suru_i_stem}ろ / #{suru_e_stem}よ",
       "Negative imperative" => "#{word}な",
