@@ -148,7 +148,7 @@ class IrregularVerb < Word
   end
 
   def keigo?
-    word.include?('ござる') || word.include?('なさる') || word.include?('いらっしゃる') || word.include?('くださる') || word.include?('御座る') || word.include?('為さる') || word.include?('下さる')
+    word.include?('ござる') || word.include?('なさる') || word.include?('いらっしゃる') || word.include?('くださる') || word.include?('おっしゃる') || word.include?('御座る') || word.include?('為さる') || word.include?('下さる') || word.include?('仰る')
   end
 
   def honorific_aru_stem
