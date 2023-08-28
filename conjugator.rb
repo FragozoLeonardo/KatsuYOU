@@ -10,7 +10,7 @@ require_relative 'lib/irregular_verb'
 module Constants
   VERSION = '5.0'
   MENU_OPTIONS = {
-    'Names (名詞).' => Name,
+    'Nouns (名詞).' => Name,
     'Group 1/る Verbs (一段活用).' => IchidanVerb,
     'Group 2/う Verbs (五段活用).' => GodanVerb,
     'Group 3/Irregular Verbs (変な活用).' => IrregularVerb,
